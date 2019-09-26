@@ -16,6 +16,9 @@ $(function() {
       $(".sideNav").toggleClass("open");
       $(".navover").toggleClass("open");
       $("body").css("overflow", "hidden");
+      setTimeout(function() {
+        $(".sideNav").addClass("origin");
+      },500)
   });
 
 
@@ -25,7 +28,11 @@ $(function() {
           $(".menuTriger").fadeIn();
           $(".navover").removeClass("open");
           $(".sideNav").toggleClass("open");
+          // $(".sideNav").toggleClass("origin");
           $("body").css("overflow", "auto");
+          setTimeout(function() {
+            $(".sideNav").removeClass("origin");
+          },1000)
       }
   });
 

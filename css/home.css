@@ -239,32 +239,55 @@ html[dir="ltr"] .menuTriger {
 .sideNav {
   position: fixed;
   top: 0;
-  right: -261px;
-  width: 260px;
+  right: 0;
+  width: 100%;
   height: 100%;
-  background-color: #FFF;
+  background-color: #FEC918;
   z-index: 99;
   overflow-y: auto;
   -webkit-transition: .5s;
   transition: .5s;
-}
-
-html[dir="ltr"] .sideNav {
-  right: unset;
-  left: -261px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
 }
 
 .sideNav.open {
-  right: 0;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
-html[dir="ltr"] .sideNav.open {
-  right: unset;
-  left: 0;
+.sideNav.open ul {
+  opacity: 1;
+}
+
+.sideNav.open ul li {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+
+.sideNav.origin {
+  -webkit-transform-origin: left;
+          transform-origin: left;
 }
 
 .sideNav .options {
-  padding: 20px;
+  padding: 0 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -274,6 +297,9 @@ html[dir="ltr"] .sideNav.open {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  top: 50px;
 }
 
 .sideNav .options .lang a {
@@ -291,7 +317,7 @@ html[dir="ltr"] .sideNav.open {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background-color: #dedede;
+  background-color: #50332C;
 }
 
 .sideNav .options .close1 {
@@ -299,7 +325,7 @@ html[dir="ltr"] .sideNav.open {
   display: -ms-flexbox;
   display: flex;
   font-size: 18px;
-  color: #dedede;
+  color: #50332C;
   cursor: pointer;
 }
 
@@ -316,7 +342,7 @@ html[dir="ltr"] .sideNav.open {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background-color: #dedede;
+  background-color: #50332C;
   display: flex;
   align-items: center;
   -webkit-box-pack: center;
@@ -344,18 +370,52 @@ html[dir="ltr"] .sideNav .options .searBtn {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 260px;
-  padding: 0px 25px 0;
+  opacity: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transition-delay: .5s;
+          transition-delay: .5s;
 }
 
 .sideNav > ul > li {
   position: relative;
-  padding: 7px 15px;
-  width: 100%;
+  padding: 7px 0;
+  margin-bottom: 20px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+  opacity: 0;
 }
 
-.sideNav > ul > li:not(:last-child) {
-  border-bottom: 1px solid #dedede;
+.sideNav > ul > li:nth-child(1) {
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s;
+}
+
+.sideNav > ul > li:nth-child(2) {
+  -webkit-transition-delay: .5s;
+          transition-delay: .5s;
+}
+
+.sideNav > ul > li:nth-child(3) {
+  -webkit-transition-delay: .7s;
+          transition-delay: .7s;
+}
+
+.sideNav > ul > li:nth-child(4) {
+  -webkit-transition-delay: .9s;
+          transition-delay: .9s;
+}
+
+.sideNav > ul > li:nth-child(5) {
+  -webkit-transition-delay: 1.1s;
+          transition-delay: 1.1s;
+}
+
+.sideNav > ul > li:nth-child(6) {
+  -webkit-transition-delay: 1.3s;
+          transition-delay: 1.3s;
 }
 
 .sideNav > ul > li a {
