@@ -314,8 +314,8 @@ html[dir="ltr"] .menuTriger {
           justify-content: center;
   font-size: 14px;
   color: #FFF;
-  width: 25px;
-  height: 25px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background-color: #50332C;
 }
@@ -339,8 +339,8 @@ html[dir="ltr"] .menuTriger {
       -ms-flex-align: center;
           align-items: center;
   color: #FFF;
-  width: 25px;
-  height: 25px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background-color: #50332C;
   display: flex;
@@ -421,7 +421,7 @@ html[dir="ltr"] .sideNav .options .searBtn {
 .sideNav > ul > li a {
   width: 100%;
   display: block;
-  font-size: 16px;
+  font-size: 20px;
   color: #50332C;
   -webkit-transition: .5s;
   transition: .5s;
