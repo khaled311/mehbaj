@@ -119,12 +119,12 @@ $(function() {
     });
   }
 
-  // Preloder
-  $(window).on("load", function() {
-    $("html").css("overflow-y", "auto");
-    $(".preloader").fadeOut(400, function() {
-      $(this).remove()
-    });
-  });
+});
 
-})
+// Preloder
+$(window).on("load", function() {
+  $("html").css("overflow-y", "auto");
+  $(".preloader").fadeOut(400, function() {
+    $(this).remove()
+  });
+});
