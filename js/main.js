@@ -32,7 +32,7 @@ $(function() {
           $("body").css("overflow", "auto");
           setTimeout(function() {
             $(".sideNav").removeClass("origin");
-          },1000)
+          },600)
       }
   });
 
